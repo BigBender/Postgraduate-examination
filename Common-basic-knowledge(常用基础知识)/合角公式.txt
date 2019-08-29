@@ -1,0 +1,2 @@
+sin在前面用sin，sin减是减，sin加是加
+cos在前面用cos，cos加是减，cos减是加
