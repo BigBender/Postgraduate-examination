@@ -57,7 +57,7 @@
 		<td>O(n^2)</td>
 		<td>O(n^2)</td>
 		<td>O(1)</td>
-		<td>稳定</td>
+		<td>不稳定</td>
 		<td>简单</td>
 	</tr>
 	<tr>	
@@ -71,9 +71,9 @@
 	</tr>	
 	<tr>	
 		<td>归并排序</td>
-		<td>O(n^2)</td>
-		<td>O(n^2)</td>
-		<td>O(n)</td>
+		<td>O(nlog2 n)</td>
+		<td>O(nlog2 n)</td>
+		<td>O(nlog2 n)</td>
 		<td>O(n)</td>
 		<td>稳定</td>
 		<td>较复杂</td>
@@ -85,6 +85,6 @@
 		<td>O(d(n+r))</td>
 		<td>O(r)</td>
 		<td>稳定</td>
-		<td>较复杂s</td>
+		<td>较复杂</td>
 	</tr>
 </table>
