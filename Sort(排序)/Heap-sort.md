@@ -45,47 +45,47 @@
 
 1. 先将序列形成完全二叉树。
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST1.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort1.png)
 
 2. 再将其调整为大根堆。
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST2.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort2.png)
 
 3. 大根堆里删除元素，重构大根堆，直到堆中的所有元素被删除。
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST3.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort3.png)
 
 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST4.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort4.png)
 
 35 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST5.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort5.png)
 
 30 35 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST6.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort6.png)
 
 20 30 35 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST7.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort7.png)
 
 17 20 30 35 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST8.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort8.png)
 
 15 17 20 30 35 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST9.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort9.png)
 
 12 15 17 20 30 35 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST10.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort10.png)
 
 10 12 15 17 20 30 35 80
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/BST11.png)<
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort11.png)
 
 2 10 12 15 17 20 30 35 80
 

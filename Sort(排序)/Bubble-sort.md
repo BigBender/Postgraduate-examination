@@ -12,7 +12,7 @@
 
 对序列：**6，5，8，4，3，1** 进行一趟冒泡排序
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/Sort3.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Bubble-sort.png)
 
 * 图中灰色部分代表需要比较的元素
 

@@ -6,7 +6,7 @@
 ### 示例
 对序列：**6，5，8，4，3，1** 进行直接插入排序
 
-![image](https://github.com/YC-L/hello-world/blob/master/imgs/Sort1.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Direct-insertion-sort.png)
 
 * 图中灰色部分代表待排序列
 * 图中透明部分代表已排序列 
