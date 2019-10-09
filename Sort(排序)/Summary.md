@@ -1,4 +1,4 @@
-<table border="1px" style="border-collapse:collapse">
+<table style="border-collapse:collapse">
 	<tr>
 		<th>排序方式</th>
 		<th colspan="3">时间复杂度</th>
