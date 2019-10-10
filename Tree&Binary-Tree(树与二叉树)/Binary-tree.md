@@ -11,7 +11,7 @@
 
 **二叉树的五种形态**
 
-![image]()
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Binary-tree.png)
 
 #### 二叉树的性质
 
@@ -39,14 +39,14 @@
 
 一组地址连续的存储单元自上而下，自左至右存储
 
-![image]()
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Bianary-tree-Sequential%20-sotrage.png)
 
 
 #### 链式存储
 
 二叉链表至少包含3个域，数据data，左指针lchild，右指针rchild
 
-![image]()
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Binary-tree-chain-sotrage.png)
 
 ```cpp
 

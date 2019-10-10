@@ -4,5 +4,5 @@
 
 首先对n个记录的关键字进行两两比较，然后在n/2个较小者之间再进行两两比较，如此重复，直至选出最小的记录为止。
 
-![image]()
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Tree-selection-sort.png)
 
