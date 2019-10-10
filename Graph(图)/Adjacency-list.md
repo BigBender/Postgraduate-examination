@@ -24,4 +24,4 @@ typedef struct AGraph{
 
 ```
 
-![image]()
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Adjacency-list.png)
