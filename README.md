@@ -1,1 +1,1 @@
-﻿# Advanced Mathematics### 高等数学4. 不定积分
+### 常用图像- ![(Cardioid)心形线](https://github.com/YC-L/Postgraduate-examination/tree/Advanced-Mathematics/%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E5%9B%BE%E5%83%8F/Cardioid.png) 
