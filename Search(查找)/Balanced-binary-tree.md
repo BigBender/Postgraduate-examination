@@ -12,7 +12,7 @@
 
 - 它的左子树和右子树都是平衡二叉树，且左子树和右子树的高度差的绝对值不超过1
 
-![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Balanced-biary-tree.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Balanced-binary-tree.png)
 
 #### 平衡二叉树的插入
 
