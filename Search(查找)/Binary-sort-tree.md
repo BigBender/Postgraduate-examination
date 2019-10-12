@@ -100,7 +100,7 @@ void Creat_BST(BiTree &T, KeyType str[], int n){
 2. 若结点z只有一颗左子树或右子树，则让z的子树成为z父结点的子树，替代z的位置
 3. 若结点z有左、右两颗子树，则令z的直接后继(或直接前驱)替代z，然后从二叉排序树中删除这个直接后继(直接前驱)，转化成第一或者第二种情况
 
-![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Binary-sort-tree-deletion.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Binary-sort-tree-Deletion.png)
 
 #### 二叉排序树的查找效率分析
 
