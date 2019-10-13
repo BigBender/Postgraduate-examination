@@ -1,6 +1,17 @@
 ## 广度优先搜索遍历
 
-广度优先搜索遍历类似于树的层次遍历
+类似于树的层次遍历
+
+基本思想：
+
+首先访问起始顶点v，接着由v出发，依次访问v的各个未访问过的邻接顶点w1, w2, ..., wi，然后再依次访问w1, w2,..., wi的所有未被访问过的邻接顶点
+
+再从这些访问过的顶点出发，再访问它们所有未被访问过的邻接顶点......依次类推，直到图中所有顶点都被访问过为止
+
+广度优先搜索是一种分层的查找过程，每向前走一步可能访问一批顶点，不像深度优先搜索那样有往回退的情况
+
+它不是一个递归的算法，为了实现逐层的访问，必须借助一个辅助队列，以记忆正在访问的顶点下一层顶点
+
 
 需要用到一个队列
 
@@ -10,45 +21,52 @@
 
 ```cpp
 
-void BFS(AGraph *G, int v, visit[maxSize]){
-	// visit数组初始化全都为0
-	ArcNode *p;
-	int que[maxSize], front = 0, rear = 0;// 定义一个队列
-	int j;
-	Visit(v);					// 访问顶点v
-	visit[v] = 1;				// 标记为已访问
-	rear = (rear+1)%maxSize;	// 当前顶点进队
-	que[rear] = v;
-	while(front != rear){		// 队列空则遍历结束
-		front = (front+1)%maxSize;// 顶点出队
-		j = que[front];
-		p = G->adjlist[j].firstarc;	// p指向出对顶点j的第一条边
-		while(p != NULL){
-			if(visit[p->adjvex] == 0){
-				Visit(p->adjvex);
-				visit[p->adjvex] = 1;
-				rear = (rear+1)%maxSize;
-				que[rear] = p->adjvex;
+bool visited[MAX_VERTEX_NUM];	// 访问标记数组
+void BFSTraverse(Graph G){
+	for(int i=0;i<G.vexnum;++i){
+		visited[i]=FALSE;		// 访问标记数组初始化
+	}	
+	InitQueue(Q);				// 初始化辅助队列
+	for(int i=0;i<G.vexnum;++i){
+		if(!visited[i]){
+			BFS(G, i)
+		}
+	}
+}
+
+void BFS(Graph G, int v){
+	visit(v);
+	visited[v]=TRUE;
+	Enqueue(Q, v);
+	while(!isEmpty(Q)){
+		DeQueue(Q, v);
+		for(w=FirstNeighbor(G, v);w>=0;w=NextNeighbor(G, v, w)){
+			if(!visited[w]){
+				visit(w);
+				visited[w]=TRUE;
+				EnQueue(Q, w);
 			}
-			p = p->nextarc;		// p 指向j的下一条边
 		}
 	}
 }
 
 ```
 
-#### 对于非连通图
+图的广度优先搜索过程于二叉树的层次遍历是完全一样的，说明了图的广度优先搜索遍历算法那是二叉树的层次遍历算法的扩展
 
-```cpp
+#### BFS算法性能分析
 
-void bfs(AGraph *g){
+无论邻接表还是邻接矩阵的存储方式，BFS算法都需要借助一个辅助队列Q，n个顶点均需入队一次，在最坏的情况下，空间复杂度为O(|V|)
 
-	int i;
-	for(i = 0;i < g->n; ++i){
-		if(Visit[i] == 0){
-			BFS(g, i);
-		}
-	}
-}
+当采用邻接表存储方式时，每个顶点均需搜索一次(或入队一次)，故时间复杂度为O(|V|)，在搜索任一顶点的邻接点时，每条边至少访问一次，时间复杂度为O(|E|)，算法总时间复杂度为O(|V|+|E|)
 
-```
+当采用邻接矩阵存储方式时，查找每个顶点的邻接点所需时间为O(|V|)，算法的总时间复杂度为O(|V|^2)
+
+#### 广度优先生成树
+
+在广度遍历过程中，可以得到一颗遍历树
+
+一给定图的**邻接矩阵存储表示为唯一**的，故其广度优先生成树也是**唯一**的，由于**邻接表存储表示不唯一**，广度优先生成树也是**不唯一**的
+
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Breadth-first-spanning-tree.png)
+

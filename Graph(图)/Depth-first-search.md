@@ -1,6 +1,8 @@
 ## 深度优先搜索
 
-类似于二叉树的先序遍历
+深度优先搜索类似于树的先序遍历
+
+基本思想：
 
 首先访问出发点v，将其标记为已访问过，选取与v邻接的未被访问的任意一个顶点w
 
@@ -8,42 +10,63 @@
 
 若一个顶点的所有邻接顶点都被访问过，回退到最近被访问过的顶点
 
+其递归形式的算法十分简洁
+
 ```cpp
 
-int visit[maxSize];
+bool visited[MAX_VERTEX_NUM];	// 访问标记数组
 
-void DFS(AGraph *G, int v){
-	ArcNode *p;
-	Visit[v] = 1;
-	Visit(v);
-	p = G->adilist[v].firstarc;
-	while(p != NULL){
-		if(visit[p->adjvex] == 0){
-			DFS(G, p->adjvex);
+void DFSTraverse(Graph G){
+	for(v=0;v<G.vexnum;++v){
+		visited[v]=FALSE;
+	}
+	for(v=0;v<G.vexnum;++v){
+		if(!visited[v]){
+			DFS(G, v);
 		}
-		p = p->nextarc;
 	}
 }
-
-
-```
-#### 对于非连通图
-
-```cpp
-
-void dfs(AGraph *g){
-
-	int i;
-	for(i = 0;i < g->n; ++i){
-		if(Visit[i] == 0){
-			DFS(g, i);
+void DFS(Graph G, int v){
+	visit(v);
+	visited[v]=TRUE:
+	for(w=FirstNeighbor(G, v);w>=0;w=NextNeighor(G, v, w)){
+		if(!visited[w]){		// w为尚未访问过的顶点
+			DFS(G, w)
 		}
 	}
 }
 
 ```
+
+#### 图的邻接矩阵是表示唯一的
+
+但对于邻接表来说，边的输入次序不同，生成的邻接表也不同
+
+基于邻接矩阵的遍历所得到的DFS序列和BFS序列是唯一的，基于邻接表的遍历所得到的DFS序列和BFS序列不唯一
+
+### DFS算法的性能分析
+
+DFS是一个递归算法，需要借助一个递归工作站栈，它的空间复杂度O(|V|)
+
+遍历图的过程实质上是对每个顶点查找其邻接点的过程，耗费的时间取决于所采用的存储结构
+
+当以**邻接矩阵**表示时，查找每个顶点的邻接点所需时间O(|V|)，故总的时间复杂度**为O(|V|^2)**
+
+当以**邻接表**表示时，查找所有顶点的邻接点所需时间为O(|E|)，访问顶点所需时间为O(|V|)，总的时间复杂度**O(|V|+|E|)**
+
+#### 深度优先生成树和生成森林
+
+与广度优先搜索一样，深度优先搜索也会产生一颗深度优先生成树，
+
+条件是，对**连通图**调用DFS才可以产生**深度优先生成树**，**非连通图**会产生**深度优先生成森林**
+
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Depth-first-spanning-tree.png)
+
+#### DFS于二叉树先序遍历
 
 - 二叉树地先序遍历对于每个结点要递归地访问**两个分支**
 - 图的深度优先搜索遍历则是递归地访问**多个分支**
 
 把图的深度优先搜索遍历过程**中所经历的边保留**，其余的边删掉，就会形成一棵树，成为**深度优先搜索生成树**
+
+
