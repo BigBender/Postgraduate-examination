@@ -1,14 +1,34 @@
 ## 最小生成树
 
-### Prime(普里姆算法，基于贪心算法)适用于稠密图
+- 最小生成树不唯一，即**最小生成树树形不唯一**，其中可能有多个最小生成树，当图中**各边权值互不相等**时，G的**最小生成树是唯一**的；若无向连通图G的边比顶点数少1，即G本身就是一棵树，G的最小生成树就是它本身
+- 最小生成树的**边的权值和总是唯一的**，虽然最小生成树不唯一，但其对应的边的权值之和总是唯一的，而且是最小的
+- 最小生成树的边数为顶点数减1
+
+### Prim(普里姆算法，基于贪心算法)适用于稠密图
 
 从图中任意取出一个顶点，把它当成一棵树，然后从这棵树相接的边中选取一条最短(权值最小)的边
 
 并将这条边及其所连顶点并入当前树中，然后再从与这棵树相接的边中选取一条最短的边，并将这条边及其所连顶点并入当前树中
 
-![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Prime.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Prim.png)
+
+```cpp
+
+void Prim(G, T){
+	T=Ø;	// 初始化空树
+	U={w};	// 添加任一顶点w
+	while((V-U)!=Ø){
+		// 设(u, v)是使u∈U与v∈(V-U)，且权值最小的边
+		T=T∪{(u ,v)};	// 边归入树
+		U=U∪{v};		// 顶点归入树
+	}
+}
+
+```
 
 ### 逐个顶点并入
+
+### Prim时间复杂度为O(|V|^2)，不依赖于|E|，适用于求解边稠密的图的最小生成树
 
 <table style="border-collapse: collapse;">
 	<tr>
@@ -35,15 +55,39 @@
 
 如果使用较为复杂的斐波那契堆，则可将运行时间进一步缩短为O(E+VlogV)，这在连通图足够密集时（当E满足Ω（VlogV）条件时），可较显著地提高运行速度。
 
-### Krusal(库鲁斯卡尔算法，基于贪心算法)适用于稀疏图
+### Kruskal(库鲁斯卡尔算法，基于贪心算法)适用于稀疏图
 
 每次找出候选边中权值最小的边，就将该边并入生成树中，重复过程知道所有边都检测完成
 
-![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Prime.png)
+与Prim算法从顶点开始扩展最小生成树不同，Kruskal算法是按权值额递增次序选择合适的边来构造最小生成树的方法
+
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Kruskal.png)
+
+```cpp
+
+void Kruskal(V, T){
+	T=V;			// 初始化树
+	numS=n;			// 连通分量数
+	while(numS>1){	// 如果连通分量数大于1
+		if(v和u属于T中不同的连通分量){
+			T=T∪{(v, u)};	// 将此边加入生成树中
+			numS--;			// 连通分量减1
+		}
+		
+	}
+}
+
+```
 
 ### 逐个边并入
 
 ### 平均时间复杂度为O(|E|log|E|)，其中E和V分别是图的边集和点集
+
+通常在Kruskal算法中，采用堆来存放边的集合，每次选择最小权值的边只需O(log|E|)的时间。
+
+又生成树T中所有边可以看作一个等价类，每次添加新的边的过程类似于求解等价类的过程
+
+可以采用并查集的树结构来描述T，从而构造T的时间复杂度为O(|E|log|E|)，适合边稀疏而顶点较多的图
 
 
 
