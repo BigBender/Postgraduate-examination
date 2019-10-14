@@ -1,1 +1,1 @@
-﻿# Postgraduate-examination### 考研- Advanced Mathematics 高等数学- English 英语- Data Structure 数据结构- Operating System 操作系统- Discrete Mathematics 离散数学- Politics 政治不同学科以分支的形式展示
+## Operating system overview(操作系统概述)![Os-overview.png]()- [Operating-system-concept(操作系统概念)]()- [Operating-system-characteristics(操作系统特征)]()- [Operating-system-goals&functions(操作系统目标和功能)]()- [Operating-system-environment(操作系统运行环境)]()
