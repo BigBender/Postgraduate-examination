@@ -108,7 +108,7 @@
 
 一个文件存储再一个文件卷中，文件卷可以是物理盘的一部分，也可以是整个物理盘，也可以是多个物理盘
 
-![image](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/The-relationship-between-logical-volume&physical-disk.png.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/The-relationship-between-logical-volume&physical-disk.png)
 
 逻辑卷与物理盘的关系
 
