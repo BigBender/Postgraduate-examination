@@ -1,10 +1,10 @@
 ## I/O控制方式
 
 设备管理的主要任务之一，控制设备和内存或处理机之间的数据传送
+**
+外围设备和内存之间的IO控制方式**
 
-### 外围设备和内存之间的IO控制方式
-
-#### 程序直接控制方式
+### 程序直接控制方式
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/Program-direct-control.png)
 
@@ -16,7 +16,7 @@
 
 致使CPU大部分时间处于**等待**I/O设备的状态，CPU资源极大浪费，工作效率低
 
-#### 中断驱动方式
+### 中断驱动方式
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/Interrupt-drive-mode.png)
 
