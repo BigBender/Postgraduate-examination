@@ -241,6 +241,30 @@
 
 **UNIX系统**常采用成组链接法，结合了空闲表和空闲链表，**克服了表大的缺点**
 
+#### 成组链接法结构
+
+![成组链接法](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/Group-link-method.png)
+
+![成组链接法结构图](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/Group-link-method-structure.png)
+
+#### 成组链接法空间分配
+
+- 内存中栈中元素结点依次出栈，分配给文件
+
+- 当内存中栈的结点全部出栈以后，将最后一个出栈的结点的块中的栈保存到内存(超级快)中，更新指针和栈中元素数量n
+
+![成组链接法空间分配](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/Group-link-method-space-allocation)
+
+#### 成组链接法空间回收
+
+- 如果内存中(超级块)的栈没有满，就将盘块压入栈中
+
+![成组链接法空间分配](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/Group-link-method-space-recycling.png)
+
+- 如果内存中(超级块)的栈已满，把超级块的内容复制到新回收的盘块中，更新指针，更新超级块中的指针指向新的新回收的盘块
+
+![成组链接法空间分配](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/Group-link-method-space-recycling2.png)
+
 #### 大致思想
 
 - 第一个空闲扇区，保存一个顺序的n个空闲扇区地址
