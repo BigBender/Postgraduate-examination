@@ -42,6 +42,8 @@
 
 - 待输出设备空闲时，再将输出井中的数据经过输出缓冲区送到输出设备
 
+![输入输出过程](https://github.com/YC-L/Postgraduate-examination/blob/Operating-System/imgs/SPOOLing-process.png)
+
 ##### SPOOLing优点
 
 SPOOLing系统，提高了I/O速度，将独占设备改造为共享设备，实现了虚拟设备功能
