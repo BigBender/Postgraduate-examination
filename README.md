@@ -8,5 +8,6 @@
 - Politics 政治
 <span style="border-top:1px solid #000">a</span>
 不同学科以分支的形式展示
+ $\overline{X}$
 
 
