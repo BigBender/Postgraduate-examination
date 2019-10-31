@@ -6,7 +6,7 @@
 - Operating System 操作系统
 - Discrete Mathematics 离散数学
 - Politics 政治
-\overline{a}
+<span style="border-top:1px solid #000">a</span>
 不同学科以分支的形式展示
 
 
