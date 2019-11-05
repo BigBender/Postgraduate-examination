@@ -1,1 +1,1 @@
-﻿# Postgraduate-examination### 考研- Advanced Mathematics 高等数学- English 英语- Data Structure 数据结构- Operating System 操作系统- Discrete Mathematics 离散数学- Politics 政治不同学科以分支的形式展示
+## 离散数学### 重要的等价公式- 双重否定律- 集合律- 分配律- 交换律- 等幂律- 等值公式- 部分解释- 吸收律
