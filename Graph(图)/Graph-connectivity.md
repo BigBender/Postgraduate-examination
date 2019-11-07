@@ -19,3 +19,13 @@
 非强连通分量一次调用BFS(G, i)或DFS(G, i)无法访问到该连通分量的所有顶点
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/G1.png)
+
+### 顶点与边数量关系
+
+- n个顶点强连通图，至少有 n 条边 (一个环)
+
+- n个顶点的强连通图，至多有 n(n-1) 条边 (n个顶点两两相连)
+
+- n个顶点两两相连，若不计方向，n个点两两相连有 n(n-1)/2条边
+
+- 而强连通图每个边有两个方向，所以有 2\*[n(n-1)]/2= n(n-1) 条边
