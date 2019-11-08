@@ -1,0 +1,34 @@
+## 算法和算法评价
+
+### 算法
+
+- 有穷性
+
+- 确定性
+
+- 可行性
+
+- 输入，一个算法零个或多个输入
+
+- 输出， 一个算法有一个或多个输出
+
+### 常用时间复杂度
+
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Common-time-complexity.png)
+
+### 典型例题
+
+```cpp
+
+int s = 0;
+for(int i=1;i<n-1;i++){
+	for(int j=n;j>=i;j--){
+		s++;
+	}
+}
+
+```
+
+- 如果 i=0, i<n，外层循环n-1次，i=1，i<n-1，外层循环 n-3 次 
+
+- s++ 一共运行了 n + (n-1) + (n-2) + ... + 3  
