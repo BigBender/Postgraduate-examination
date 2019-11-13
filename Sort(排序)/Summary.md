@@ -26,7 +26,7 @@
 	</tr>
 	<tr>	
 		<td>希尔排序</td>
-		<td>O(n^1.3)</td>
+		<td>O(n^1.5)</td>
 		<td></td>
 		<td></td>
 		<td>O(1)</td>

@@ -20,7 +20,6 @@
 
 若 rtag=0 表示rchild为指针，指向结点的右孩子；如果 rtag=1，表示rchild为线索，指向结点的直接后继
 
-
 ```cpp
 
 typedef struct TBTNode{
