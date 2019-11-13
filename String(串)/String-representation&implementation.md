@@ -17,8 +17,10 @@
 ```cpp 
 
 define MAXSTRLEN 256
+
 typedef char sstring[MAXSTRLEN];
-sstring s;   
+
+Sstring s;   
 
 ```
 
