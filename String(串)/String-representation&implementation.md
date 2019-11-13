@@ -20,7 +20,7 @@ define MAXSTRLEN 256
 typedef char sstring[MAXSTRLEN];
 sstring s;   
 
-```cpp
+```
 
 - 一般可使用一个**不会出现在串中的特殊字符**在串值的尾部来表示串的结束
 
