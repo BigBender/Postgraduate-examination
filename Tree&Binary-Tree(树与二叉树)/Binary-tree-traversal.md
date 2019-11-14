@@ -8,9 +8,6 @@
 
 ### 二叉树的递归遍历
 
-
-
-
 ```cpp
 
 // 先序遍历模板
@@ -149,4 +146,42 @@ void level (BiTNode *p){
 	}
 }
 
-``
+```
+
+### 典型例题
+
+- 实现从**大到小**输出二叉排序树中所有其值不小于k的关键字
+
+```cpp
+
+void Output(BSTNode *bt, KeyType k){
+	if(bt != NULL){
+		Output(bt->rchild, k);
+		if(bt->key >= k){
+			print("%d, by->key");
+		}
+		Output(bt->lchild, k);
+	}
+}
+
+```
+
+- 先递归右孩子，输出，再递归左孩子，顺序从大到小(逆中序)
+
+- 实现从**小到大**输出二叉排序树中所有其值不小于k的关键字
+
+```cpp
+
+void Output(BSTNode *bt, KeyType k){
+	if(bt != NULL){
+		Output(bt->lchild, k);
+		if(bt->key >= k){
+			print("%d, by->key");
+		}
+		Output(bt->rchild, k);
+	}
+}
+
+```
+
+- 先递归左孩子，输出，再递归右孩子，顺序从小到大(中序)
