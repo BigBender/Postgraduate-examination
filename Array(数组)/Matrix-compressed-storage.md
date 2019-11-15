@@ -157,7 +157,7 @@ TransposeSMatrix(M, T) {
 	}
 }//  TransposeSMtrix
 
-```cpp
+```
 
 #### 快速转置
 
