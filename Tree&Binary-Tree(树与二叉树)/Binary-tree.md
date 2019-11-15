@@ -56,7 +56,6 @@
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Bianary-tree-Sequential%20-sotrage.png)
 
-
 #### 链式存储
 
 二叉链表至少包含3个域，数据data，左指针lchild，右指针rchild
@@ -114,6 +113,18 @@ int getHeight(TreeNode &root){
 }
 
 ```
+
+- 一棵有124个叶子的完全二叉树，至少有多少个结点，最多有多少个结点
+
+- 2^6 < 124 < 2^7 ，这棵树有 8 层
+
+- 第8层最多有，2^7=128个结点，现在有124个叶子结点
+
+- 叶子结点是最底层的结点数 加 上一层叶结点
+
+- 128 - x + x/2 = 124，x = 8 或 x = 9
+
+- 最多有 256 - 8 = 248 个结点，最少有 256 - 9 = 247 个结点
 
 
 
