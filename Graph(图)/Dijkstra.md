@@ -102,4 +102,130 @@ e为该点的边数，所以复杂度降为O((m+n)logn)
 
 - s若该点不在堆里，加入堆，更新堆
 
-- 若取到的u为终点，结束算法；否则重复步骤2、3。
+- 若取到的u为终点，结束算法；否则重复步骤2、3
+
+### 典型例题
+
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Dijkstra-instance.png)
+
+- 求从V1出发到其余各顶点的最短路径长度(顶点号从1开始计)
+
+<table style="border-collapse: collapse;">
+	<tr>
+		<th>趟数</th>
+		<th>V2</th>
+		<th>V3</th>
+		<th>V4</th>
+		<th>V5</th>
+		<th>V6</th>
+		<th>V7</th>
+		<th>▢</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>V1, 2</td>
+		<td>V1, 5</td>
+		<td>V1, 3</td>
+		<td>∞</td>
+		<td>∞</td>
+		<td>∞</td>
+		<td>{V1,V2}</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>V1, 2</td>
+		<td>V2, 4</td>
+		<td>V1, 3</td>
+		<td>∞</td>
+		<td>V2, 9</td>
+		<td>∞</td>
+		<td>{V1, V2, V3}</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>V1, 2</td>
+		<td>V2, 4</td>
+		<td>V1, 3</td>
+		<td>V3, 7</td>
+		<td>V2, 9</td>
+		<td>∞</td>
+		<td>{V1, V2, V3, V4}</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>V1, 2</td>
+		<td>V1, 5</td>
+		<td>V1, 3</td>
+		<td>V3, 7</td>
+		<td>V2, 9</td>
+		<td>∞</td>
+		<td>{V1, V2, V3, V4, V5}</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>V1, 2</td>
+		<td>V1, 5</td>
+		<td>V1, 3</td>
+		<td>V3, 7</td>
+		<td>V2, 9</td>
+		<td>V5, 14</td>
+		<td>{V1, V2, V3, V4, V5, V6}</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>V1, 2</td>
+		<td>V1, 5</td>
+		<td>V1, 3</td>
+		<td>V3, 7</td>
+		<td>V2, 9</td>
+		<td>V5, 14</td>
+		<td>{V1, V2, V3, V4, V5, V6, V7}</td>
+	</tr>
+</table>
+
+- V1到各点的最短路径和长度
+
+<table style="border-collapse: collapse;">
+	<tr>
+		<th>▢</th>
+		<th>长度</th>
+		<th>路径</th>
+	</tr>
+	<tr>
+		<td>V1到V2</td>
+		<td>2</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>V1到V3</td>
+		<td>4</td>
+		<td>1, 2</td>
+	</tr>
+	<tr>
+		<td>V1到V4</td>
+		<td>3</td>
+		<td>1</td>
+	</tr>
+	<tr>
+		<td>V1到V5</td>
+		<td>7</td>
+		<td>1, 2, 3</td>
+	</tr>
+	<tr>
+		<td>V1到V6</td>
+		<td>9</td>
+		<td>1, 2, 6</td>
+	</tr>
+	<tr>
+		<td>V1到V7</td>
+		<td>14</td>
+		<td>1, 2, 3, 5</td>
+	</tr>
+</table>
+
+
+
+
+
