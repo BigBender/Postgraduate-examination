@@ -1,8 +1,10 @@
 ## 邻接表
 
-邻接表是图的一种链式存储结构
+- 邻接表是图的一种链式存储结构
 
-邻接表存储表示的定义如下
+- 存储的是图的出度
+
+- 邻接表存储表示的定义如下
 
 ```cpp
 
@@ -25,3 +27,13 @@ typedef struct AGraph{
 ```
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Adjacency-list.png)
+
+### 逆邻接表
+
+- 与邻接表相反，存储的是图的入度
+
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Reverse-adjacency-list.png.png)
+
+
+
+
