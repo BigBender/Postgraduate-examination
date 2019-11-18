@@ -32,7 +32,7 @@ typedef struct AGraph{
 
 - 与邻接表相反，存储的是图的入度
 
-![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Reverse-adjacency-list.png.png)
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Reverse-adjacency-list.png)
 
 
 
