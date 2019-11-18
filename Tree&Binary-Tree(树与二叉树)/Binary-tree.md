@@ -73,6 +73,63 @@ typedef struc BiTNode{
 
 - n个结点的二叉链表含有 n+1 个空链域
 
+#### 静态链表存储(双亲存储)
+
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Static-linked-list.png)
+
+<table style="border-collapse: collapse;">
+	<tr>
+		<th>数组下标</th>
+		<th></th>
+		<th>双亲结点</th>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>V1</td>
+		<td>-1</td>		
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>V2</td>
+		<td>0</td>		
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>V3</td>
+		<td>0</td>		
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>V4</td>
+		<td>1</td>		
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>V5</td>
+		<td>2</td>		
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>V6</td>
+		<td>2</td>		
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>V7</td>
+		<td>3</td>		
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>V8</td>
+		<td>4</td>		
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>V9</td>
+		<td>6</td>		
+	</tr>
+</table>
+
 ### 树的存储结构
 
 #### 双亲表示法
