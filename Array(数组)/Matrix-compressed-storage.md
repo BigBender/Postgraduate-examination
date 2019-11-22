@@ -52,6 +52,8 @@ void mutmat(int C[][maxSize], int A[][maxSize], int B[][maxSize], int m, int n, 
 
 - k=i(i-1)/2+(j-1)，当 i>=j时(下三角区和主对角线)；j(j-1)/2+(i-1)，当i<j(上三角区)
 
+![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Symmetric-matrix-compression-storage.png)
+
 #### 三角矩阵
 
 - 只需要存储 n*(n+1)/2 + 1 个元素即可(相比对称矩阵，多出来的那个元素是c)
@@ -90,7 +92,7 @@ void mutmat(int C[][maxSize], int A[][maxSize], int B[][maxSize], int m, int n, 
 
 ### 稀疏矩阵
 
--  设矩阵A中有s个非零元素，若s远远小于矩阵元素的总数（即s≦m×n），则称A为稀疏矩阵
+-  设矩阵A中有**s个非零元素**，且s**远远小于矩阵元素的总数**（即s≦m×n），这s个元素**分布没有规律**
 
 #### 稀疏因子
 
