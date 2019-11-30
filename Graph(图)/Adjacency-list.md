@@ -34,6 +34,9 @@ typedef struct AGraph{
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/Reverse-adjacency-list.png)
 
+### 典型例题
+
+- 具有n个结点和e条边的无向图中，采用邻接表作为存储结构，需要有 2e 个表结点
 
 
 

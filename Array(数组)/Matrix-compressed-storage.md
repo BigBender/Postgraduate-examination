@@ -102,6 +102,8 @@ void mutmat(int C[][maxSize], int A[][maxSize], int B[][maxSize], int m, int n, 
 
 - 三元组表示法，行、列、元素值，(i,j,aij)
 
+- 系数矩阵一般的压缩存储方法是三元组和十字链表
+
 #### 三元组顺序表
 
 ```cpp
@@ -160,7 +162,6 @@ TransposeSMatrix(M, T) {
 }//  TransposeSMtrix
 
 ```
-
 #### 快速转置
 
 
