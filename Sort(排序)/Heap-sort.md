@@ -73,51 +73,49 @@
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort1.png)
 
-2. 再将其调整为大根堆。
+2. 再将其调整为大根堆
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort2.png)
+
+- {20, 12, 35, 15, 10, 80, 30, 17, 2, 1}
 
 3. 大根堆里删除元素，重构大根堆，直到堆中的所有元素被删除。
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort3.png)
 
-- 80
+- {20, 12, 35, 15, 10, 30, 17, 2, 1, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort4.png)
 
-- 35 80
+- {20, 12, 15, 10, 30, 17, 2, 1, 35, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort5.png)
 
-30 35 80
+- {20, 12, 15, 10, 17, 2, 1, 30, 35, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort6.png)
 
-- 20 30 35 80
+- {12, 15, 10, 17, 2, 1, 20, 30, 35, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort7.png)
 
-- 17 20 30 35 80
+- {12, 15, 10, 2, 1, 17, 20, 30, 35, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort8.png)
 
-- 15 17 20 30 35 80
+- {12, 10, 2, 1, 15, 17, 20, 30, 35, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort9.png)
 
-- 12 15 17 20 30 35 80
+- {10, 2, 1, 12, 15, 17, 20, 30, 35, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort10.png)
 
-- 10 12 15 17 20 30 35 80
+- {2, 1, 10, 12, 15, 17, 20, 30, 35, 80}
 
 ![image](https://github.com/YC-L/Postgraduate-examination/blob/DataStructure/imgs/HeapSort11.png)
 
-- 2 10 12 15 17 20 30 35 80
-
-- 最后结果
-
-- 1 2 10 12 15 17 20 30 35 80
+- {1, 2, 10, 12, 15, 17, 20, 30, 35, 80}
 
 ### 时间复杂度分析
 
